@@ -1,0 +1,74 @@
+.form-personal-data {
+    display: flex;
+}
+
+.form-personal-data > * {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.form-checkout {
+    padding: 40px 60px;
+    width: 65%;
+    border: 1px solid black;
+}
+
+.form-address-place {
+    display: flex;
+}
+
+.form-address-place > * {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.title-address-bill {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.title-address-delivery {
+    font-size: 20px;
+}
+
+.form-checkout > .address {
+    margin-right: 20px;
+    width: 97.5%;
+}
+
+.form-check-label  {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 0 10px 10px;
+}
+
+.form-check-label::before {
+    content: "";
+}
+
+.buyer-preferred-payment-method > * {
+    width: 50%;
+}
+
+input[type="radio"] {
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-left: 0!important;
+}
+
+.panel {
+    width: 100%;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+}
+
+.cvv {
+    width: 47%;
+}
+
+.card-payment-information {
+    border-top: 1px solid grey;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
