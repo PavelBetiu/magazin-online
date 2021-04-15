@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plata</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/libs/bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <h1>Plaseaza comanda</h1>
+    <div class="form-buyer-personal-information">
+        <div class="form">
+            <form class="form-checkout">
+                <h2 class="title-address-delivery">Adresa de livrare</h2>
+                <div class="form-personal-data mb-2">
+                    <div class="name-last">
+                        <label for="inputLastName" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Nume de familie">
+                    </div>
+                    <div class="name-first">
+                        <label for="inputFirstName" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="Prenume">
+                    </div>
+                    <div class="number-phone">
+                        <label for="inputPhoneNumber" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Numar de telefon">
+                    </div>
+                </div>
+                <div class="address mb-2">
+                    <label for="inputAddress" class="form-label"></label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="str Marin Sorescu, nr 9, sc 5, bl 81">
+                </div>
+                <div class="form-address-place mb-2">
+                    <div class="name-country">
+                        <label for="inputCountry" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputCountry" placeholder="Tara">
+                    </div>
+                    <div class="name-county">
+                        <label for="inputCounty" class="form-label"></label>
+                        <select id="inputCounty" class="form-select">
+                            <option selected>Judet </option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="name-city">
+                        <label for="inputCity" class="form-label"></label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Oras">
+                    </div>
+                </div>
+                <h2 class="title-address-bill">Adresa de facturare</h2>
+                <div class="form-address-send">
+                    <div class="option">
+                        <input class="form-address-send-place" type="checkbox" id="send-package">
+                        <label class="form-send-package" for="send-package">
+                            Foloseste aceleasi date cu cele de la adresa de livrare!
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#card-payment" aria-expanded="false" aria-controls="card-payment">
+                    Continua plata</button>
+                </div>
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="buyer-preferred-payment-method collapse" id="card-payment">
+        <h2 class="form mt-5">Selectati o metoda de plata:</h2>
+        <ul class="form-checkout-option">
+            <li class="form-check panel form-check-padding">
+                <input class="form-check-input mr-2" type="radio" id="card-check" data-bs-toggle="collapse" name="Check"
+                       data-bs-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment-information">
+                <label class="form-check-label" for="card-check">
+                    Card online
+                </label>
+                <div class="card-payment-information collapse px-5" id="card-payment-info" aria-labelledby="card-check"
+                     aria-expanded="false">
+                    <div class="form-personal-data mb-2">
+                        <div class="number-card">
+                            <label for="inputCardNumber" class="form-label mt-4">NUMARUL CARDULUI:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="Te rugam sa completezi numarul cardului.">
+                        </div>
+                        <div class="number-cvv">
+                            <label for="inputCVVName" class="form-label mt-4">COD DE SECURITATE:</label>
+                            <input type="text" class="form-control" id="inputCVVName" placeholder="CVV/CVV2">
+                        </div>
+                    </div>
+                    <div class="date-expiration mb-2">
+                        <label for="expirationDate" class="form-label">DATA DE EXPIRARE:</label>
+                        <input type="text" class="form-control cvv" id="expirationDate" placeholder="EX: 11/22">
+                    </div>
+                    <div class="name-first mb-2">
+                        <label for="ownerName" class="form-label">TITULAR CARD</label>
+                        <input type="text" class="form-control" id="ownerName" placeholder="NUMELE DETINATORULUI DE CARD">
+                    </div>
+                </div>
+            </li>
+            <li class="form-check panel mt-2">
+                <input class="form-check-input" type="radio" id="cash-check" name="Check" checked>
+                <label class="form-check-label" for="cash-check">
+                    Plata la livrare
+                </label>
+            </li>
+        </ul>
+    </div>
+</main>
+<footer>
+
+</footer>
+
+<script src="assets/libs/bootstrap-5.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
