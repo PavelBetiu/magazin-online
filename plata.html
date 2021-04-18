@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plata</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/libs/bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/plata.css">
+
+</head>
+<body>
+<header>
+
+</header>
+<main>
+    <h1 class="title mt-4">Plaseaza comanda</h1>
+
+    <div class="payment-details mt-3">
+        <div class="title-bar flex-container">
+            <span class="step-number complete">1</span>
+            <span class="step-heading">Livrare si facturare</span>
+            <a href="#" class="btn btn-change move-right">Modifica</a>
+        </div>
+        <div class="sub-section shipping-summary">
+            <div class="address-box">
+                <span class="summary-label">Livrare:</span>
+                <address>
+
+                </address>
+            </div>
+        </div>
+        <div class="sub-section shipping-summary">
+            <div class="address-box">
+                <span class="summary-label">Facturare:</span>
+                <address>
+
+                </address>
+            </div>
+        </div>
+
+        <div class="title-bar flex-container mt-4">
+            <span class="step-number">2</span>
+            <span class="step-heading">Detalii plata</span>
+        </div>
+
+        <div class="sub-section">
+            <form>
+                <h3 class="summary-label payment-select-option">Selectati o metoda de plata:</h3>
+
+                <div class="panel overflow-hidden mb-4 form-check bg-light">
+                    <input class="button-radio-align button-color" type="radio" id="card-check" data-bs-toggle="collapse" name="Check"
+                           data-bs-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
+                    <label class="form-check-label" for="card-check">
+                        Card online
+                    </label>
+
+                    <div class="card-payment-information collapse row" id="card-payment-info" aria-labelledby="card-check"
+                         aria-expanded="false">
+                        <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">NUMARUL CARDULUI:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="Te rugam sa completezi numarul cardului.">
+                        </div>
+                        <div class="number-cvv col-6">
+                            <label for="inputCVVName" class="form-label mt-2">COD DE SECURITATE:</label>
+                            <input type="text" class="form-control" id="inputCVVName" placeholder="CVV/CVV2">
+                        </div>
+                        <div class="date-expiration mb-2 col-3">
+                            <label for="expirationDate" class="form-label">DATA DE EXPIRARE:</label>
+                            <input type="text" class="form-control cvv" id="expirationDate" placeholder="EX: 11/22">
+                        </div>
+                        <div class="name-first mb-2">
+                            <label for="ownerName" class="form-label">TITULAR CARD</label>
+                            <input type="text" class="form-control" id="ownerName" placeholder="NUMELE DETINATORULUI DE CARD">
+                        </div>
+                        <div class="option mb-2">
+                            <input class="form-address-send-place" type="checkbox" id="save-information">
+                            <label class="form-send-package" for="save-information">
+                                Salveaza informatiile pentru achizitii ulterioare.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-check panel mb-2 bg-light">
+                    <input class="button-radio-align" type="radio" id="cash-check" name="Check" checked>
+                    <label class="form-check-label" for="cash-check">
+                        Plata la livrare
+                    </label>
+                </div>
+
+                <div class="option mb-2 mt-4">
+                    <input class="form-address-send-place" type="checkbox" id="form-terms">
+                    <label class="form-send-package" for="form-terms">
+                        Prin plasarea comenzii, sunt de acord cu termenii si conditiile acestui site.
+                    </label>
+                </div>
+            </form>
+
+            <button type="submit" class="mt-4 btn-style mb-3">Plaseaza comanda</button>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+
+<script src="assets/libs/bootstrap-5.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
