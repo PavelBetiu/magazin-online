@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script>
+        const basket = { };
+        const order = {
+            addToBasket: (product, quantity) => {
+                basket[product] = quantity;
+                console.log("added to basket");
+                console.log("Basket:", basket);
+            }
+        };
+    </script>
+    <script>
+        function load_category(cat) {
+            console.log(basket);
+            document.getElementsByClassName("current_category")[0].className = 'category_hidden';
+            document.getElementById(cat).className = 'current_category';
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header">
+                <div class="navigation-bar">
+                    <div class="subheader-stanga">
+                        <div class="container-logo">
+                            <img src="assets/icons/logo.png" />
+                        </div>
+                        <span>Food</span>
+                    </div>
+                    <div class="subheader-dreapta">
+                        <button class="btn btn-success" >Shopping cart
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-success" >Login
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidenav">
+            <button class="dropdown-btn">Lactate
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="load_category('branzeturi')">Branzeturi</a>
+                <a href="#" onclick="load_category('empty')">Iaurt</a>
+                <a href="#" onclick="load_category('empty')">Lapte</a>
+                <a href="#" onclick="load_category('empty')">Smantana</a>
+            </div>
+            <a href="#clients" onclick="load_category('mezeluri')">Mezeluri</a>
+            <a href="#contact" onclick="load_category('inghetata')">Inghetata</a>
+            <button class="dropdown-btn">Carne
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="load_category('empty')">Pasare</a>
+                <a href="#" onclick="load_category('empty')">Porc</a>
+                <a href="#" onclick="load_category('empty')">Vita/manzat</a>
+                <a href="#" onclick="load_category('empty')">Oaie/miel</a>
+            </div>
+            <a href="#contact" onclick="load_category('empty')">Pescarie</a>
+            <a href="#contact" onclick="load_category('empty')">Oua</a>
+        </div>
+        <div id='content'>
+            <div id='default' class='current_category'>Bine ati venit!</div>
+            <div id='branzeturi' class='category_hidden'>
+                <div class="produse-container">
+                    <div class="produs">
+                        <img src="assets/icons/phila.jpg" />
+                        <p>Crema de branza Philadelphia
+                            <br>200 g</p>
+                        <p class="pret">9 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(1, 'philadelphia', 9.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="produs">
+                        <img src="assets/icons/telemea.jpg" />
+                        <p>Telemea
+                            <br>350 g</p>
+                        <p class="pret">12 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(1, 'telemea', 12.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="produs">
+                        <img src="assets/icons/delaco.jpg" />
+                        <p>Cascaval Delaco
+                            <br>450 g</p>
+                        <p class="pret">19 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(3, 'delaco', 19.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id='mezeluri' class='category_hidden'>
+                <div class="produse-container">
+                    <div class="produs">
+                        <img src="assets/icons/banatean.jpg" />
+                        <p>Salam banatean feliat
+                            <br>100 g</p>
+                        <p class="pret">6 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(4, 'banatean', 6.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="produs">
+                        <img src="assets/icons/rustic.jpg" />
+                        <p>Salam Rustic
+                            <br>300 g</p>
+                        <p class="pret">9 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(5, 'rustic', 9.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="produs">
+                        <img src="assets/icons/sibiu.jpg" />
+                        <p>Salam Sibiu
+                            <br>350 g</p>
+                        <p class="pret">21 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(6, 'sibiu', 21.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="produs">
+                        <img src="assets/icons/special.jpg" />
+                        <p>Salam Sibiu Special
+                            <br>350 g</p>
+                        <p class="pret">20 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(7, 'sibiu', 20.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id='inghetata' class='category_hidden'>
+                <div class="produse-container">
+                    <div class="produs">
+                        <img src="assets/icons/snickers.jpg" />
+                        <p>Pachet Snickers
+                            <br>100 g</p>
+                        <p class="pret">21 lei</p>
+                        <p class="stoc">In stoc</p>
+                        <button class="btn btn-success" onclick="order.addToBasket(8, 'snickers', 21.0)">Cumpara
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id='empty' class="fara-produse category_hidden">Stoc epuizat, ne pare rau. </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="contact">
+                <p> S.C. BioFood Craiova</p>
+                <p> Contact: Strada Gladiolei, nr. 34, Craiova, DOLJ, Romania </p>
+                <p> Telefon: 074777777 </p>
+            </div>
+            <div class="subfooter">Copyright(c) 2021 Universitatea Craiova</div>
+        </div>
+    </footer>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
+<!-- 
+ m-am inspirat de aici:
+https://www.w3schools.com/howto/howto_js_dropdown_sidenav.asp
+ -->
