@@ -4,7 +4,7 @@
 
 .form-checkout {
     padding: 40px 60px;
-    width: 65%;
+    width: fit-content;
     border: 1px solid black;
 }
 
@@ -113,7 +113,7 @@ address {
     line-height: 1.42857143;
 }
 .complete {
-    background: #2a52a2!important;
+    background: #133926!important;
     color: #fff!important;
 }
 
@@ -123,8 +123,8 @@ address {
     height: 25px;
     padding: 2px;
     background: #fff;
-    border: 2px solid cornflowerblue;
-    color: #2a52a2;
+    border: 2px solid #c6ecd9;
+    color: #206040;
     text-align: center;
     font-weight: bold;
     margin: 5px 7.5px 5px 15px;
@@ -135,11 +135,11 @@ address {
     font-size: 14px;
     line-height: 35px;
     text-transform: uppercase;
-    color: #1a3365;
+    color: white;
 }
 
 .title-bar {
-    background-color: lightsteelblue;
+    background-color: #339966;
 }
 
 .move-right {
@@ -169,7 +169,7 @@ address {
 .btn-style {
     font-weight: bold;
     display: inline-block;
-    background-color: cornflowerblue;
+    background-color: #133926;
     line-height: 1.5;
     color: white;
     text-align: center;
@@ -191,12 +191,82 @@ button:active {
 }
 
 .payment-details {
-    width: 45%;
+    width: fit-content;
     margin-left: 10%;
 }
 
 .title {
-    margin-left: 22%;
     font-size: 35px;
     font-weight: bold;
+    padding-top: 6%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.main-padding {
+    padding-bottom: 2%;
+}
+
+header {
+    width: 100%;
+    color: black;
+    top: 0;
+    height: fit-content;
+}
+
+.navigation-bar {
+    display: flex;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.subheader-stanga {
+    text-align: left;
+    font-size: 35px;
+    color: black;
+    font-family: "Garamond", sans-serif;
+    flex: 75%;
+    transform: scale(1, 1.5);
+    letter-spacing: 2px;
+    padding-left: 80%;
+    display: flex;
+    background: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.subheader-stanga span {
+    padding-top: 8px;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.container-logo img {
+    width: 90px;
+}
+
+
+.footer {
+    background: #e6ffe6;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: darkgray;
+    width: 100%;
+}
+
+.contact {
+    text-align: left;
+    padding: 15px 300px;
+}
+.contact p {
+    padding: 3px;
+    margin: 0 !important;
+}
+
+.subfooter {
+    text-align: right;
+    padding: 0 100px 5px 100px;
 }

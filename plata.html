@@ -13,12 +13,23 @@
 </head>
 <body>
 <header>
-
+    <div class="header">
+        <div class="navigation-bar">
+            <div class="subheader-stanga">
+                <div class="container-logo">
+                    <img src="assets/icons/logo.png" />
+                </div>
+                <span>Food</span>
+            </div>
+        </div>
+    </div>
 </header>
-<main>
-    <h1 class="title mt-4">Plaseaza comanda</h1>
+<main class="bg-light main-padding">
 
-    <div class="payment-details mt-3">
+    <div class="payment-details">
+
+        <h1 class="title">Plaseaza comanda</h1>
+
         <div class="title-bar flex-container">
             <span class="step-number complete">1</span>
             <span class="step-heading">Livrare si facturare</span>
@@ -53,7 +64,7 @@
                 <div class="panel overflow-hidden mb-4 form-check bg-light">
                     <input class="button-radio-align button-color" type="radio" id="card-check" data-bs-toggle="collapse" name="Check"
                            data-bs-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
-                    <label class="form-check-label" for="card-check">
+                    <label class="form-check-label" for="card-check" onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'>
                         Card online
                     </label>
 
@@ -99,12 +110,19 @@
                 </div>
             </form>
 
-            <button type="submit" class="mt-4 btn-style mb-3">Plaseaza comanda</button>
+            <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Plaseaza comanda</button>
         </div>
     </div>
 </main>
 <footer>
-
+    <div class="footer">
+        <div class="contact">
+            <p> S.C. BioFood Craiova</p>
+            <p> Contact: Strada Gladiolei, nr. 34, Craiova, DOLJ, Romania </p>
+            <p> Telefon: 074777777 </p>
+        </div>
+        <div class="subfooter">Copyright(c) 2021 Universitatea Craiova</div>
+    </div>
 </footer>
 
 <script src="assets/libs/bootstrap-5.0.0/js/bootstrap.min.js"></script>
