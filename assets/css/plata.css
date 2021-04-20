@@ -190,10 +190,10 @@ button:active {
     color: black;
 }
 
-.payment-details {
+/*.payment-details {
     width: fit-content;
     margin-left: 10%;
-}
+}*/
 
 .title {
     font-size: 35px;

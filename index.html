@@ -10,16 +10,11 @@
     <link rel="stylesheet" href="assets/libs/bootstrap-4.6/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/libs/bootstrap-4.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/index.css"/>
+    <link rel="stylesheet" href="assets/css/plata.css">
 
     <script>
         const basket = {};
-        const order = {
-            addToBasket: (product, quantity) => {
-                basket[product] = quantity;
-                console.log("added to basket");
-                console.log("Basket:", basket);
-            }
-        };
+
     </script>
     <script>
         function load_category(cat) {
@@ -49,24 +44,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-link-spaced ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link btn-pink active" href="#">
-                            Shopping cart
+                        <a class="nav-link btn-pink active" href="#" data-toggle="modal" data-target="#cart">
+                            Shopping cart (<span
+                                class="total-quantity"></span>)
                             <i class="bi bi-cart"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-pink" href="#">Home
-                            Shopping cart
-                            <i class="bi bi-cart"></i>
+                        <a class="nav-link btn-pink" href="#" data-toggle="modal" data-target="#payment">
+                            Payment
                         </a>
-                    </li>
-                    <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span
-                            class="total-count"></span>)
-                    </button>
-                    </li>
-                    <li class="nav-item">
-                    <button class="clear-cart btn btn-danger">Clear Cart</button>
                     </li>
                 </ul>
             </div>
@@ -166,7 +153,6 @@
                                 <a href="#contact" onclick="load_category('empty')">Oua</a>
                             </div>-->
     </header>
-
     <section class="grid-content container">
         <div class="sidebar-filters">
             <form>
@@ -225,7 +211,7 @@
                                 <p class="card-text">9 lei</p>
                                 <p class="card-text text-success">In stoc</p>
                                 <a href="#" class="btn btn-block btn-pink"
-                                   onclick="shoppingCart.addToBasket(1, 'philadelphia', 9.0)">
+                                   onclick="shoppingCart.addToBasket(1, 'Crema de branza Philadelphia', 9.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
                                 </a>
@@ -243,7 +229,7 @@
                                 <p class="card-text">12 lei</p>
                                 <p class="card-text text-success">In stoc</p>
                                 <a href="#" class="btn btn-block btn-pink"
-                                   onclick="order.addToBasket(1, 'telemea', 12.0)">
+                                   onclick="shoppingCart.addToBasket(1, 'Telemea', 12.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
                                 </a>
@@ -261,7 +247,7 @@
                                 <p class="card-text">19 lei</p>
                                 <p class="card-text text-success">In stoc</p>
                                 <a href="#" class="btn btn-block btn-pink"
-                                   onclick="order.addToBasket(3, 'delaco', 19.0)">
+                                   onclick="shoppingCart.addToBasket(3, 'Cascaval Delaco', 19.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
                                 </a>
@@ -282,7 +268,7 @@
                             <br>100 g</p>
                         <p class="pret">6 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="order.addToBasket(4, 'banatean', 6.0)">Cumpara
+                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(4, 'Salam banatean feliat 100 g', 6.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -296,7 +282,7 @@
                             <br>300 g</p>
                         <p class="pret">9 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="order.addToBasket(5, 'rustic', 9.0)">Cumpara
+                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(5, 'Salam Rustic 300 g', 9.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -310,7 +296,7 @@
                             <br>350 g</p>
                         <p class="pret">21 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="order.addToBasket(6, 'sibiu', 21.0)">Cumpara
+                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(6, 'Salam Sibiu 350 g', 21.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -324,7 +310,7 @@
                             <br>350 g</p>
                         <p class="pret">20 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="order.addToBasket(7, 'sibiu', 20.0)">Cumpara
+                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(7, 'Salam Sibiu Special 350 g', 20.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -342,7 +328,7 @@
                             <br>100 g</p>
                         <p class="pret">21 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="order.addToBasket(8, 'snickers', 21.0)">Cumpara
+                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(8, 'Pachet Snickers 100 g', 21.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -357,11 +343,11 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="shoppingcart" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <h5 class="modal-title" id="shoppingcart">Cart</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -374,17 +360,25 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Order now</button>
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#payment">Order now</button>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="script_shoppingcart.js"></script>
 
+    <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="paymentcart" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentcart">Plata</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+    <div class="bg-light main-padding">
 
-    <main class="bg-light main-padding">
-
-        <h1 class="title">Plaseaza comanda</h1>
         <div class="payment-details">
 
             <div class="title-bar flex-container">
@@ -419,9 +413,9 @@
                     <h3 class="summary-label payment-select-option">Selectati o metoda de plata:</h3>
 
                     <div class="panel overflow-hidden mb-4 form-check bg-light">
-                        <input class="button-radio-align button-color" type="radio" id="card-check" data-bs-toggle="collapse" name="Check"
-                               data-bs-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
-                        <label class="form-check-label" for="card-check" onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'>
+                        <input class="button-radio-align button-color" type="radio" id="card-check" data-toggle="collapse" name="Check"
+                               data-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
+                        <label class="form-check-label" for="card-check" ><!--onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'-->
                             Card online
                         </label>
 
@@ -470,8 +464,14 @@
                 <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Plaseaza comanda</button>
             </div>
         </div>
-    </main>
-
+    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer-main">
         <div class="container">
@@ -517,6 +517,7 @@
 <script type="text/javascript" src="assets/libs/bootstrap-4.6/js/jquery-3.5.1.min.js"></script>
 <script src="assets/libs/bootstrap-4.6/js/bootstrap.min.js"></script>
 <script src="assets/libs/bootstrap-4.6/js/popper.min.js"></script>
+
 <script type="text/javascript" src="script_shoppingcart.js"></script>
 <script>
 
