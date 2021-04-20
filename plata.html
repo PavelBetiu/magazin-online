@@ -6,9 +6,13 @@
     <title>Plata</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/libs/bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-4.6.0/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/plata.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -61,14 +65,13 @@
                 <h3 class="summary-label payment-select-option">Selectati o metoda de plata:</h3>
 
                 <div class="panel overflow-hidden mb-4 form-check bg-light">
-                    <input class="button-radio-align button-color" type="radio" id="card-check" data-bs-toggle="collapse" name="Check"
-                           data-bs-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
+                    <input class="button-radio-align button-color" type="radio" id="card-check" data-toggle="collapse" name="Check"
+                           data-target="#collapse-card">
                     <label class="form-check-label" for="card-check" onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'>
                         Card online
                     </label>
 
-                    <div class="card-payment-information collapse row" id="card-payment-info" aria-labelledby="card-check"
-                         aria-expanded="false">
+                    <div class="card-payment-information collapse row" id="collapse-card">
                         <div class="number-card col-6">
                             <label for="inputCardNumber" class="form-label mt-2">NUMARUL CARDULUI:</label>
                             <input type="text" class="form-control" id="inputCardNumber" placeholder="Te rugam sa completezi numarul cardului.">
@@ -123,8 +126,6 @@
         <div class="subfooter">Copyright(c) 2021 Universitatea Craiova</div>
     </div>
 </footer>
-
-<script src="assets/libs/bootstrap-5.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>

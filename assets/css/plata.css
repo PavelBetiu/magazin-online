@@ -191,7 +191,7 @@ button:active {
 }
 
 .payment-details {
-    width: fit-content;
+    width: 50%;
     margin-left: 10%;
 }
 
