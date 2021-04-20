@@ -1,0 +1,38 @@
+// setInvoicingDetails(name, email, phone, address, city, county, company, cui)
+// setShippingDetails(name, email, phone, address, city, county)
+let invoicingDetails=
+{
+    invoice:{},
+    shipping:{},
+    setInvoicingDetails: function(name, email, phone, address, city, county, company, cui)
+    {
+        event.preventDefault();
+       this.invoice=
+           {
+               name: name,
+               email: email,
+               phone:phone,
+               address:phone,
+               city:city,
+               county:county,
+               company:company,
+               cui:cui
+           }
+           console.log(this.invoice);
+    },
+    setShippingDetails: function(name, email, phone, address, city, county)
+    {
+        event.preventDefault();
+        this.shipping=
+            {
+                name: name,
+                email: email,
+                phone:phone,
+                address:phone,
+                city:city,
+                county:county,
+            }
+            console.log(this.shipping);
+    }
+
+};
