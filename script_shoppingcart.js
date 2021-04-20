@@ -1,5 +1,7 @@
+"use strict";
+
 var shoppingCart = (function() {
-    cart = [];
+    let cart = [];
 
     // Constructor
     function Item(name, price, count) {
@@ -24,7 +26,7 @@ var shoppingCart = (function() {
     var obj = {};
 
     // Add to cart
-    obj.addItemToCart = function(name, price, count) {
+    obj.addToBasket = function(name, price, count) {
         for(var item in cart) {
             if(cart[item].name === name) {
                 cart[item].count ++;
@@ -97,10 +99,10 @@ var shoppingCart = (function() {
     // List cart
     obj.listCart = function() {
         var cartCopy = [];
-        for(i in cart) {
-            item = cart[i];
-            itemCopy = {};
-            for(p in item) {
+        for(let i in cart) {
+            let item = cart[i];
+            let itemCopy = {};
+            for(let p in item) {
                 itemCopy[p] = item[p];
 
             }
@@ -112,7 +114,7 @@ var shoppingCart = (function() {
 
     // cart : Array
     // Item : Object/Class
-    // addItemToCart : Function
+    // addToBasket : Function
     // removeItemFromCart : Function
     // removeItemFromCartAll : Function
     // clearCart : Function
@@ -130,7 +132,7 @@ $('.add-to-cart').click(function(event) {
     event.preventDefault();
     var name = $(this).data('name');
     var price = Number($(this).data('price'));
-    shoppingCart.addItemToCart(name, price, 1);
+    shoppingCart.addToBasket(name, price, 1);
     displayCart();
 });
 
@@ -179,7 +181,7 @@ $('.show-cart').on("click", ".minus-item", function(event) {
 // +1
 $('.show-cart').on("click", ".plus-item", function(event) {
     var name = $(this).data('name')
-    shoppingCart.addItemToCart(name);
+    shoppingCart.addToBasket(name);
     displayCart();
 })
 
