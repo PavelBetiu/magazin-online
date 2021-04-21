@@ -5,10 +5,14 @@
     --color-pink-deep: #8b5151;
     --color-white: white;
     --color-dark: #343a40;
+    --color-green: #339966;
+    --color-green-rgb: rgb(51, 153, 102);
+    --color-green-dark: #133926;
 }
 
 body {
-    /*background-color: #dfe9bb !important;*/
+
+    background-color: rgb(233, 235, 238);
     font-family: "Lato", sans-serif;
 }
 
@@ -293,7 +297,6 @@ input[type="radio"] {
 }*/
 
 
-
 /***************************
 ** Alina Refactoring Start **
 ***************************/
@@ -303,10 +306,20 @@ input[type="radio"] {
     background-color: var(--color-pink);
     border-color: var(--color-pink-deep);
 }
+.btn-green {
+    color: #fff;
+    background-color: var(--color-green-dark);
+    border-color: var(--color-green);
+}
+.btn-green:hover {
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border-color: var(--color-green-dark);
+}
 
 .btn-pink:hover {
     color: var(--color-pink);
-    background-color:  var(--color-white);
+    background-color: var(--color-white);
 }
 
 .navbar-link-spaced > .nav-item {
@@ -323,22 +336,24 @@ input[type="radio"] {
 
 }
 
-.footer-main {
-    background: #265a08;
-    padding: 16px;
-    border-right: 1px solid white;
-    color: white;
-}
-
 .card-product {
-    border: solid !important;
-    border-radius: 8px !important;
-    border-color: green !important;;
+    border-color: transparent;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 1px -2px rgba(51, 153, 102, .2), 0 2px 2px 0 rgba(51, 153, 102, 0.38), 0 1px 5px 0 rgba(51, 153, 102, 0.34);
     text-align: center !important;
 }
-.card-product > .card-body p{
+.card-product >img {
+    max-width: 200px;
+    margin: auto;
+}
+.content-main .row > * {
+    padding-bottom: 32px;
+}
+
+.card-product > .card-body p {
     margin: 0;
 }
+
 .card-product > .card-body > .card-title {
     min-height: calc(2 * 1.25em);
     line-height: 1.25em;
@@ -353,55 +368,70 @@ input[type="radio"] {
     grid-template-columns: 12fr;
     grid-template-rows: auto minmax(80vh, auto) auto;
 }
-.grid-app > *:nth-child(-n + 2)  {
-    background: var(--white);
+
+@media (min-width: 1200px) {
+    .grid-app .container, .grid-app .container-lg, .grid-app .container-md, .grid-app .container-sm, .grid-app .container-xl {
+        max-width: 1440px;
+    }
 }
 
 .menu-main {
     position: absolute;
     width: 100%;
     display: grid;
-    grid-template-columns: 3fr 9fr;
+    background-color: var(--color-white);
+    grid-template-columns: 2fr 9fr;
     column-gap: 1em;
     z-index: 2;
     min-height: 60vh;
-    box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.grid-content {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+    column-gap: 1em;
+}
+
+.sidebar-filters {
+
+    display: flex;
+    flex-direction: column;
+
+}
+.sidebar-filters > * {
+    margin-bottom: 16px;
+    border-radius: 4px !important;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    background-color: var(--color-white);
+    padding: 16px;
 }
 
 .menu-main .nav-sidebar {
-    box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .menu-main .tab-pane {
     padding-top: 16px;
     padding-bottom: 16px;
 }
+
 .menu-main > .nav-sidebar .nav-link {
     color: var(--color-dark);
 }
+
 .menu-main > .nav-sidebar .nav-link.active {
     color: var(--primary);
     margin-right: -3px;
     background-color: var(--white);
 }
 
-.grid-content {
-    display: grid;
-    grid-template-columns: 3fr 9fr;
-    column-gap: 1em;
-}
 
-.sidebar-filters {
-    border: 1px solid silver;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-}
-.content-main {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border: 1px solid silver;
-}
+
+
 .category_hidden {
     display: none;
 }
@@ -411,6 +441,17 @@ input[type="radio"] {
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* footer start*/
+.footer-main {
+    background: #265a08;
+    border-right: 1px solid white;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+/* footer end */
+
+
 
 /***************************
 ** Alina Refactoring End **
@@ -438,6 +479,7 @@ input[type="radio"] {
     margin-left: auto;
     margin-right: auto;
 }
+
 .product-category-card .card-header {
     padding-bottom: 6px;
     display: flex;
@@ -447,7 +489,8 @@ input[type="radio"] {
     align-items: center;
     background-color: var(--white);
 }
-.product-category-card >.card-header .card-title {
+
+.product-category-card > .card-header .card-title {
     font-size: 14px;
     font-weight: bold;
     overflow: hidden;
@@ -458,6 +501,7 @@ input[type="radio"] {
     margin: 0;
 
 }
+
 /*************************
 * product-category-card END **
 **************************/

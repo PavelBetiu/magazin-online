@@ -176,52 +176,97 @@
     </header>
     <section class="grid-content container">
         <div class="sidebar-filters">
-            <form>
-                <div class="form-group">
-                    <label for="formControlRange">Price</label>
-                    <input type="range" class="form-control-range" id="formControlRange">
-                </div>
-                <div class="form-group">
-                    <label for="inputState">Brand</label>
-                    <select id="inputState" class="form-control">
-                        <option>Choose...</option>
-                        <option>Nokia</option>
-                        <option selected>Samsung</option>
-                        <option>Apple</option>
-                    </select>
-                </div>
-                <fieldset class="form-group row">
-                    <legend class="col-form-label col-sm-12 float-sm-left pt-0">Radios</legend>
-                    <div class="col-sm-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                   value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                First radio
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                   value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                Second radio
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                   value="option3" disabled>
-                            <label class="form-check-label" for="gridRadios3">
-                                Third disabled radio
-                            </label>
-                        </div>
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="formControlRange">Price</label>
+                        <input type="range" class="form-control-range" id="formControlRange">
                     </div>
-                </fieldset>
-            </form>
+                    <div class="form-group">
+                        <label for="inputState">Brand</label>
+                        <select id="inputState" class="form-control">
+                            <option>Choose...</option>
+                            <option>Nokia</option>
+                            <option selected>Samsung</option>
+                            <option>Apple</option>
+                        </select>
+                    </div>
+                    <fieldset class="form-group row">
+                        <legend class="col-form-label col-sm-12 float-sm-left pt-0">Radios</legend>
+                        <div class="col-sm-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                       value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    First radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                       value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                       value="option3" disabled>
+                                <label class="form-check-label" for="gridRadios3">
+                                    Third disabled radio
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="formControlRange">Price</label>
+                        <input type="range" class="form-control-range" id="formControlRange">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputState">Brand</label>
+                        <select id="inputState" class="form-control">
+                            <option>Choose...</option>
+                            <option>Nokia</option>
+                            <option selected>Samsung</option>
+                            <option>Apple</option>
+                        </select>
+                    </div>
+                    <fieldset class="form-group row">
+                        <legend class="col-form-label col-sm-12 float-sm-left pt-0">Radios</legend>
+                        <div class="col-sm-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                       value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    First radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                       value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Second radio
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                       value="option3" disabled>
+                                <label class="form-check-label" for="gridRadios3">
+                                    Third disabled radio
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-        <div class="content-main ">
+        <div class="content-main">
             <div id="branzeturi" class="current_category">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/phila.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -231,7 +276,7 @@
                                 <p class="card-text">200 g</p>
                                 <p class="card-text">9 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <a href="#" class="btn btn-block btn-pink"
+                                <a href="#" class="btn btn-block btn-green"
                                    onclick="shoppingCart.addToBasket(1, 'Crema de branza Philadelphia', 9.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -239,7 +284,82 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card card-product">
+                            <img src="assets/icons/sos-de-branzeturi-cascina-lia-130-g-8896204603422.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b>Sos de branzeturi Cascina Lia </b>
+                                </h5>
+                                <p class="card-text">130 g</p>
+                                <p class="card-text">7.10 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <a href="#" class="btn btn-block btn-green"
+                                   onclick="shoppingCart.addToBasket(1, 'Sos de branzeturi Cascina Lia', 7.10)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card card-product">
+                            <img src="assets/icons/mozzarella-zanetti-bufala-cu-trufe-125-g-8912053043230.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b> Mozzarella Zanetti Bufala cu trufe </b>
+                                </h5>
+                                <p class="card-text"> 125 g</p>
+                                <p class="card-text">12.70 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <a href="#" class="btn btn-block btn-green"
+                                   onclick="shoppingCart.addToBasket(1, 'Mozzarella Zanetti Bufala cu trufe', 12.70)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card card-product">
+                            <img src="assets/icons/branza-de-capra-rulou-cu-piper-100-gr-la-colline-8882986614814.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b> Branza de capra rulou cu piper  La Colline </b>
+                                </h5>
+                                <p class="card-text"> 100 g</p>
+                                <p class="card-text">11.20 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <a href="#" class="btn btn-block btn-green"
+                                   onclick="shoppingCart.addToBasket(1, 'Branza de capra rulou cu piper  La Colline', 11.20)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="card card-product">
+                            <img src="assets/icons/branza-halloumi-mediterranea-cu-chilli-200g-8903408648222.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b> Branza halloumi Mediterranea cu chilli </b>
+                                </h5>
+                                <p class="card-text"> 200g</p>
+                                <p class="card-text">15.20 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <a href="#" class="btn btn-block btn-green"
+                                   onclick="shoppingCart.addToBasket(1, 'Branza halloumi Mediterranea cu chilli', 15.20)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/telemea.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -249,7 +369,7 @@
                                 <p class="card-text">350 g</p>
                                 <p class="card-text">12 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <a href="#" class="btn btn-block btn-pink"
+                                <a href="#" class="btn btn-block btn-green"
                                    onclick="shoppingCart.addToBasket(1, 'Telemea', 12.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -257,7 +377,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/delaco.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -267,7 +387,7 @@
                                 <p class="card-text">450 g</p>
                                 <p class="card-text">19 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <a href="#" class="btn btn-block btn-pink"
+                                <a href="#" class="btn btn-block btn-green"
                                    onclick="shoppingCart.addToBasket(3, 'Cascaval Delaco', 19.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -282,7 +402,7 @@
             </div>
             <div id="mezeluri" class="category_hidden">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/banatean.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -292,7 +412,7 @@
                                 <p class="card-text">100 g</p>
                                 <p class="card-text">6 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <button class="btn btn-block btn-pink"
+                                <button class="btn btn-block btn-green"
                                         onclick="shoppingCart.addToBasket(4, 'Salam banatean feliat 100 g', 6.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -300,7 +420,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/rustic.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -310,7 +430,7 @@
                                 <p class="card-text">300 g</p>
                                 <p class="card-text">9 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <button class="btn btn-block btn-pink"
+                                <button class="btn btn-block btn-green"
                                         onclick="shoppingCart.addToBasket(5, 'Salam Rustic 300 g', 9.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -318,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/sibiu.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -328,7 +448,7 @@
                                 <p class="card-text">350 g</p>
                                 <p class="card-text">21 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <button class="btn btn-block btn-pink"
+                                <button class="btn btn-block btn-green"
                                         onclick="shoppingCart.addToBasket(6, 'Salam Sibiu 350 g', 21.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
@@ -336,7 +456,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 col-lg-3">
                         <div class="card card-product">
                             <img src="assets/icons/special.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
@@ -346,8 +466,8 @@
                                 <p class="card-text">350 g</p>
                                 <p class="card-text">20 lei</p>
                                 <p class="card-text text-success">In stoc</p>
-                                <button class="btn btn-block btn-pink"
-                                        onclick="shoppingCart.addToBasket(7, 'Salam Sibiu Special 350 g', 20.0">
+                                <button class="btn btn-block btn-green"
+                                        onclick="shoppingCart.addToBasket(7, 'Salam Sibiu Special 350 g', 20.0)">
                                     <i class="bi bi-cart"></i>
                                     Cumpara
                                 </button>
@@ -527,7 +647,7 @@
 
     <footer class="footer-main">
         <div class="container">
-            <div class="contact">
+            <div >
                 <p> S.C. BioFood Craiova</p>
                 <p> Contact: Strada Gladiolei, nr. 34, Craiova, DOLJ, Romania </p>
                 <p> Telefon: 074777777 </p>
