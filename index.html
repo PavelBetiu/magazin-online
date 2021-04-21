@@ -427,17 +427,94 @@
                             <div class="sub-section shipping-summary">
                                 <div class="address-box">
                                     <span class="summary-label">Livrare:</span>
-                                    <address>
+                                    <form>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">NUME:</label>
+                                            <input type="text" class="form-control" id="sname" name="firstlastname" placeholder="nume">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">EMAIL:</label>
+                                            <input type="email" class="form-control" id="semail" name="email" placeholder="email">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">TELEFON:</label>
+                                            <input type="email" class="form-control" id="sphone" name="phone" placeholder="phone">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">ADRESA:</label>
+                                            <input type="text" class="form-control" id="saddress" name="address" placeholder="adresa">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">ORAS:</label>
+                                            <input type="text" class="form-control" id="scity" name="city" placeholder="oras">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">JUDET:</label>
+                                            <input type="text" class="form-control" id="scounty" name="county" placeholder="judet">
+                                        </div>
 
-                                    </address>
+                                        <button type="submit" class="mt-4 btn-style mb-3" onclick="shoppingCart.setShippingDetails(
+                                            this.form.firstlastname.value,
+                                            this.form.email.value,
+                                            this.form.phone.value,
+                                            this.form.address.value,
+                                            this.form.city.value,
+                                            this.form.county.value,
+                                        )">Salveaza datele de livrare</button>
+
+                                    </form>
                                 </div>
                             </div>
                             <div class="sub-section shipping-summary">
                                 <div class="address-box">
                                     <span class="summary-label">Facturare:</span>
-                                    <address>
+                                    <form>
 
-                                    </address>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">NUME:</label>
+                                            <input type="text" class="form-control" id="iname" name="firstlastname" placeholder="nume">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">EMAIL"</label>
+                                            <input type="email" class="form-control" id="iemail" name="email" placeholder="email">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">NUMAR DE TELEFOM:</label>
+                                            <input type="text" class="form-control" id="iphone" name="phone" placeholder="numar telefon">
+                                        </div>
+
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">ADRESA:</label>
+                                            <input type="text" class="form-control" id="iaddress" name="address" placeholder="adresa">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">ORAS:</label>
+                                            <input type="text" class="form-control" id="icity" name="city" placeholder="oras">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">JUDET:</label>
+                                            <input type="text" class="form-control" id="icounty" name="county" placeholder="judet">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">NUMELE COMPANIEI:</label>
+                                            <input type="text" class="form-control" id="icompany" name="company" placeholder="numele companiei">
+                                        </div>
+                                        <div class="number-card col-6">
+                                            <label for="inputCardNumber" class="form-label mt-2">CUI:</label>
+                                            <input type="text" class="form-control" id="icui" name="cui" placeholder="cui">
+                                        </div>
+
+                                        <button type="submit" class="mt-4 btn-style mb-3" onclick="shoppingCart.setInvoicingDetails(
+                                            this.form.firstlastname.value,
+                                            this.form.email.value,
+                                            this.form.phone.value,
+                                            this.form.address.value,
+                                            this.form.city.value,
+                                            this.form.county.value,
+                                            this.form.company.value,
+                                            this.form.cui.value,
+                                        )">Salveaza datele de livrare</button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -452,9 +529,9 @@
 
                                     <div class="panel overflow-hidden mb-4 form-check bg-light">
                                         <input class="button-radio-align button-color" type="radio" id="card-check"
-                                               data-toggle="collapse" name="Check"
+                                               data-toggle="collapse" name="paymentType"
                                                data-target="#card-payment-info" aria-expanded="false"
-                                               aria-controls="card-payment">
+                                               aria-controls="card-payment" value="card">
                                         <label class="form-check-label" for="card-check">
                                             <!--onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'-->
                                             Card online
@@ -466,23 +543,32 @@
                                             <div class="number-card col-6">
                                                 <label for="inputCardNumber" class="form-label mt-2">NUMARUL
                                                     CARDULUI:</label>
-                                                <input type="text" class="form-control" id="inputCardNumber"
+                                                <input type="text" class="form-control" id="inputCardNumber" name="inputCardNumber"
                                                        placeholder="Te rugam sa completezi numarul cardului.">
                                             </div>
                                             <div class="number-cvv col-6">
                                                 <label for="inputCVVName" class="form-label mt-2">COD DE
                                                     SECURITATE:</label>
-                                                <input type="text" class="form-control" id="inputCVVName"
+                                                <input type="text" class="form-control" id="inputCVVName" name="inputCVVName"
                                                        placeholder="CVV/CVV2">
                                             </div>
                                             <div class="date-expiration mb-2 col-3">
-                                                <label for="expirationDate" class="form-label">DATA DE EXPIRARE:</label>
-                                                <input type="text" class="form-control cvv" id="expirationDate"
-                                                       placeholder="EX: 11/22">
+                                                <label for="expirationMonth" class="form-label">LUNA:</label>
+                                                <input type="text" class="form-control cvv" id="expirationMonth" name="expirationMonth"
+                                                       placeholder="11">
+                                            </div>
+                                            <div class="date-expiration mb-2 col-1">
+                                                <label for="expirationMonth" class="form-label">/</label>
+                                            </div>
+                                            <div class="date-expiration mb-2 col-3">
+                                                <label for="expirationMonth" class="form-label">AN:</label>
+
+                                                <input type="text" class="form-control cvv" id="expirationYear" name="expirationYear"
+                                                       placeholder="2022">
                                             </div>
                                             <div class="name-first mb-2">
                                                 <label for="ownerName" class="form-label">TITULAR CARD</label>
-                                                <input type="text" class="form-control" id="ownerName"
+                                                <input type="text" class="form-control" id="ownerName" name="ownerName"
                                                        placeholder="NUMELE DETINATORULUI DE CARD">
                                             </div>
                                             <div class="option mb-2">
@@ -496,8 +582,8 @@
                                     </div>
 
                                     <div class="form-check panel mb-2 bg-light">
-                                        <input class="button-radio-align" type="radio" id="cash-check" name="Check"
-                                               checked>
+                                        <input class="button-radio-align" type="radio" id="cash-check" name="paymentType"
+                                               checked value="ramburs">
                                         <label class="form-check-label" for="cash-check">
                                             Plata la livrare
                                         </label>
@@ -510,16 +596,20 @@
                                             site.
                                         </label>
                                     </div>
-                                </form>
 
-                                <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Plaseaza comanda
+                                <button type="submit" class="mt-4 btn-style mb-3" onclick="shoppingCart.setPayment(
+                                    this.form.paymentType.value,
+                                    this.form.inputCardNumber.value,
+                                    this.form.ownerName.value,
+                                    this.form.expirationMonth.value,
+                                    this.form.expirationYear.value,
+                                    this.form.inputCVVName.value,
+                                ); shoppingCart.process()">Plaseaza comanda
                                 </button>
+                                </form>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Continue</button>
                 </div>
             </div>
         </div>
@@ -570,7 +660,7 @@
 <script src="assets/libs/bootstrap-4.6/js/bootstrap.min.js"></script>
 <script src="assets/libs/bootstrap-4.6/js/popper.min.js"></script>
 
-<script type="text/javascript" src="script_shoppingcart.js"></script>
+<script type="text/javascript" src="shoppingcart.js"></script>
 <script>
 
 </script>
