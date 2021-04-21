@@ -8,6 +8,7 @@
     --color-green: #339966;
     --color-green-rgb: rgb(51, 153, 102);
     --color-green-dark: #133926;
+    --color-lemon: #CAD61C;
 }
 
 body {
@@ -440,6 +441,9 @@ input[type="radio"] {
     background-image: url('field.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.bg-lemon {
+    background-color: var(--color-lemon);
 }
 /* footer start*/
 .footer-main {
