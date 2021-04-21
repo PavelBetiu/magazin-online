@@ -443,7 +443,7 @@ input[type="radio"] {
 }
 /* footer start*/
 .footer-main {
-    background: #265a08;
+    background: var(--color-green-dark);
     border-right: 1px solid white;
     color: white;
     padding-top: 16px;
