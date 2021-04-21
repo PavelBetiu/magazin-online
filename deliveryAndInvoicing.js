@@ -1,11 +1,19 @@
 // setInvoicingDetails(name, email, phone, address, city, county, company, cui)
 // setShippingDetails(name, email, phone, address, city, county)
+
+      function msg(){  
+     alert("Hello Javatpoint");  
+    }  
+
+
+
 let invoicingDetails=
 {
     invoice:{},
     shipping:{},
     setInvoicingDetails: function(name, email, phone, address, city, county, company, cui)
     {
+      alert("merge");
         event.preventDefault();
        this.invoice=
            {

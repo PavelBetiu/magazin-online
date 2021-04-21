@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="deliveryAndInvoicing.js"></script>  
 
 </head>
 <body>
@@ -41,17 +42,82 @@
         <div class="sub-section shipping-summary">
             <div class="address-box">
                 <span class="summary-label">Livrare:</span>
-                <address>
 
-                </address>
-            </div>
-        </div>
+  <form>
+
+
+                        <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">NUME:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="nume">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">EMAIL"</label>
+                            <input type="email" class="form-control" id="inputCardNumber" placeholder="email">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">ADRESA:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="adresa">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">ORAS:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="oras">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">TARA:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="tara.">
+                        </div>
+
+                        <button type="submit" class="mt-4 btn-style mb-3" onclick="msg()">Salveaza datele de facturare</button>
+
+</form>
+</div>
+</div>
         <div class="sub-section shipping-summary">
             <div class="address-box">
                 <span class="summary-label">Facturare:</span>
-                <address>
 
-                </address>
+            <form>
+
+                        <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">NUME:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="nume">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">EMAIL"</label>
+                            <input type="email" class="form-control" id="inputCardNumber" placeholder="email">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">NUMAR DE TELEFOM:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="numar telefon">
+                        </div>
+
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">ADRESA:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="adresa">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">ORAS:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="oras">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">TARA:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="tara.">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">NUMELE COMPANIEI:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="numele companiei">
+                        </div>
+                                                <div class="number-card col-6">
+                            <label for="inputCardNumber" class="form-label mt-2">CUI:</label>
+                            <input type="text" class="form-control" id="inputCardNumber" placeholder="cui">
+                        </div>
+
+                        <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Salveaza datele de livrare</button>
+
+
+                </div>
+</form>
+ 
             </div>
         </div>
 
