@@ -70,7 +70,7 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
                                     <button id="menu-main-trigger" class="btn btn-dark btn-block"
-                                       onclick="onTriggerMainMenu('menu-main')">
+                                            onclick="onTriggerMainMenu('menu-main')">
                                         Produse
                                         <i class="bi bi-stack"></i>
                                     </button>
@@ -78,8 +78,8 @@
                             </ul>
                         </div>
                     </nav>
-                    <div class="menu-main d-none" id="menu-main">
-                        <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="menu-main  d-none" id="menu-main">
+                        <div class="nav nav-sidebar flex-column bg-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
                                role="tab" aria-controls="v-pills-home" aria-selected="true">
                                 Supermarket
@@ -96,24 +96,45 @@
                                 <i class="bi bi-bag-fill"></i>
                             </a>
                         </div>
-                        <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-content bg-white" id="v-pills-tabContent">
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                  aria-labelledby="v-pills-home-tab">
-                                <ul>
-                                    <li>
-                                        <a href="#" onclick="load_category('branzeturi')">Branzeturi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="load_category('empty')">Iaurt</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" onclick="load_category('empty')">Lapte</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" onclick="load_category('empty')">Smantana</a>
-                                    </li>
-                                </ul>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="card product-category-card" onclick="load_category('branzeturi')">
+                                                <img src="assets/icons/phila.jpg" class="card-img-top" alt="Category Image">
+                                                <div class="card-header">
+                                                    <h5 class="card-title">Branzeturi</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card product-category-card" onclick="load_category('mezeluri')">
+                                                <img src="assets/icons/special.jpg" class="card-img-top" alt="Category Image">
+                                                <div class="card-header">
+                                                    <h5 class="card-title">Mezeluri</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card product-category-card" onclick="load_category('empty')">
+                                                <img src="assets/icons/povestea-iaurtului.png" class="card-img-top" alt="Category Image">
+                                                <div class="card-header">
+                                                    <h5 class="card-title">Iaurturi</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card product-category-card" onclick="load_category('empty')">
+                                                <img src="assets/icons/milk-cream-food.png" class="card-img-top" alt="Category Image">
+                                                <div class="card-header">
+                                                    <h5 class="card-title">Lapte</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
                                  aria-labelledby="v-pills-profile-tab">Nothing here
@@ -255,68 +276,83 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div id="default" class="category_hidden text-center">
                 <h4><b>Bine ati venit!</b></h4>
             </div>
             <div id="mezeluri" class="category_hidden">
-                <div class="produse-container">
-                    <div class="produs">
-                        <img src="assets/icons/banatean.jpg"/>
-                        <p>Salam banatean feliat
-                            <br>100 g</p>
-                        <p class="pret">6 lei</p>
-                        <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(4, 'Salam banatean feliat 100 g', 6.0)">Cumpara
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-cart" viewBox="0 0 16 16">
-                                <path
-                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>
-                        </button>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card card-product">
+                            <img src="assets/icons/banatean.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b>Salam banatean feliat</b>
+                                </h5>
+                                <p class="card-text">100 g</p>
+                                <p class="card-text">6 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <button class="btn btn-block btn-pink"
+                                        onclick="shoppingCart.addToBasket(4, 'Salam banatean feliat 100 g', 6.0)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="produs">
-                        <img src="assets/icons/rustic.jpg"/>
-                        <p>Salam Rustic
-                            <br>300 g</p>
-                        <p class="pret">9 lei</p>
-                        <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(5, 'Salam Rustic 300 g', 9.0)">Cumpara
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-cart" viewBox="0 0 16 16">
-                                <path
-                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>
-                        </button>
+                    <div class="col-4">
+                        <div class="card card-product">
+                            <img src="assets/icons/rustic.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b>Salam Rustic</b>
+                                </h5>
+                                <p class="card-text">300 g</p>
+                                <p class="card-text">9 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <button class="btn btn-block btn-pink"
+                                        onclick="shoppingCart.addToBasket(5, 'Salam Rustic 300 g', 9.0)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="produs">
-                        <img src="assets/icons/sibiu.jpg"/>
-                        <p>Salam Sibiu
-                            <br>350 g</p>
-                        <p class="pret">21 lei</p>
-                        <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(6, 'Salam Sibiu 350 g', 21.0)">Cumpara
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-cart" viewBox="0 0 16 16">
-                                <path
-                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>
-                        </button>
+                    <div class="col-4">
+                        <div class="card card-product">
+                            <img src="assets/icons/sibiu.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b>Salam Sibiu</b>
+                                </h5>
+                                <p class="card-text">350 g</p>
+                                <p class="card-text">21 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <button class="btn btn-block btn-pink"
+                                        onclick="shoppingCart.addToBasket(6, 'Salam Sibiu 350 g', 21.0)">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="produs">
-                        <img src="assets/icons/special.jpg"/>
-                        <p>Salam Sibiu Special
-                            <br>350 g</p>
-                        <p class="pret">20 lei</p>
-                        <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(7, 'Salam Sibiu Special 350 g', 20.0)">Cumpara
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="bi bi-cart" viewBox="0 0 16 16">
-                                <path
-                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>
-                        </button>
+                    <div class="col-4">
+                        <div class="card card-product">
+                            <img src="assets/icons/special.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <b>Salam Sibiu Special</b>
+                                </h5>
+                                <p class="card-text">350 g</p>
+                                <p class="card-text">20 lei</p>
+                                <p class="card-text text-success">In stoc</p>
+                                <button class="btn btn-block btn-pink"
+                                        onclick="shoppingCart.addToBasket(7, 'Salam Sibiu Special 350 g', 20.0">
+                                    <i class="bi bi-cart"></i>
+                                    Cumpara
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,7 +364,8 @@
                             <br>100 g</p>
                         <p class="pret">21 lei</p>
                         <p class="stoc">In stoc</p>
-                        <button class="btn btn-success" onclick="shoppingCart.addToBasket(8, 'Pachet Snickers 100 g', 21.0)">Cumpara
+                        <button class="btn btn-success"
+                                onclick="shoppingCart.addToBasket(8, 'Pachet Snickers 100 g', 21.0)">Cumpara
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -361,7 +398,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button class="clear-cart btn btn-danger">Clear Cart</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#payment">Order now</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#payment">Order now
+                    </button>
                 </div>
             </div>
         </div>
@@ -377,94 +415,108 @@
                     </button>
                 </div>
                 <div class="modal-body">
-    <div class="bg-light main-padding">
+                    <div class="bg-light main-padding">
 
-        <div class="payment-details">
+                        <div class="payment-details">
 
-            <div class="title-bar flex-container">
-                <span class="step-number complete">1</span>
-                <span class="step-heading">Livrare si facturare</span>
-                <a href="#" class="btn btn-change move-right">Modifica</a>
-            </div>
-            <div class="sub-section shipping-summary">
-                <div class="address-box">
-                    <span class="summary-label">Livrare:</span>
-                    <address>
-
-                    </address>
-                </div>
-            </div>
-            <div class="sub-section shipping-summary">
-                <div class="address-box">
-                    <span class="summary-label">Facturare:</span>
-                    <address>
-
-                    </address>
-                </div>
-            </div>
-
-            <div class="title-bar flex-container mt-4">
-                <span class="step-number">2</span>
-                <span class="step-heading">Detalii plata</span>
-            </div>
-
-            <div class="sub-section">
-                <form>
-                    <h3 class="summary-label payment-select-option">Selectati o metoda de plata:</h3>
-
-                    <div class="panel overflow-hidden mb-4 form-check bg-light">
-                        <input class="button-radio-align button-color" type="radio" id="card-check" data-toggle="collapse" name="Check"
-                               data-target="#card-payment-info" aria-expanded="false" aria-controls="card-payment">
-                        <label class="form-check-label" for="card-check" ><!--onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'-->
-                            Card online
-                        </label>
-
-                        <div class="card-payment-information collapse row" id="card-payment-info" aria-labelledby="card-check"
-                             aria-expanded="false">
-                            <div class="number-card col-6">
-                                <label for="inputCardNumber" class="form-label mt-2">NUMARUL CARDULUI:</label>
-                                <input type="text" class="form-control" id="inputCardNumber" placeholder="Te rugam sa completezi numarul cardului.">
+                            <div class="title-bar flex-container">
+                                <span class="step-number complete">1</span>
+                                <span class="step-heading">Livrare si facturare</span>
+                                <a href="#" class="btn btn-change move-right">Modifica</a>
                             </div>
-                            <div class="number-cvv col-6">
-                                <label for="inputCVVName" class="form-label mt-2">COD DE SECURITATE:</label>
-                                <input type="text" class="form-control" id="inputCVVName" placeholder="CVV/CVV2">
+                            <div class="sub-section shipping-summary">
+                                <div class="address-box">
+                                    <span class="summary-label">Livrare:</span>
+                                    <address>
+
+                                    </address>
+                                </div>
                             </div>
-                            <div class="date-expiration mb-2 col-3">
-                                <label for="expirationDate" class="form-label">DATA DE EXPIRARE:</label>
-                                <input type="text" class="form-control cvv" id="expirationDate" placeholder="EX: 11/22">
+                            <div class="sub-section shipping-summary">
+                                <div class="address-box">
+                                    <span class="summary-label">Facturare:</span>
+                                    <address>
+
+                                    </address>
+                                </div>
                             </div>
-                            <div class="name-first mb-2">
-                                <label for="ownerName" class="form-label">TITULAR CARD</label>
-                                <input type="text" class="form-control" id="ownerName" placeholder="NUMELE DETINATORULUI DE CARD">
+
+                            <div class="title-bar flex-container mt-4">
+                                <span class="step-number">2</span>
+                                <span class="step-heading">Detalii plata</span>
                             </div>
-                            <div class="option mb-2">
-                                <input class="form-address-send-place" type="checkbox" id="save-information">
-                                <label class="form-send-package" for="save-information">
-                                    Salveaza informatiile pentru achizitii ulterioare.
-                                </label>
+
+                            <div class="sub-section">
+                                <form>
+                                    <h3 class="summary-label payment-select-option">Selectati o metoda de plata:</h3>
+
+                                    <div class="panel overflow-hidden mb-4 form-check bg-light">
+                                        <input class="button-radio-align button-color" type="radio" id="card-check"
+                                               data-toggle="collapse" name="Check"
+                                               data-target="#card-payment-info" aria-expanded="false"
+                                               aria-controls="card-payment">
+                                        <label class="form-check-label" for="card-check">
+                                            <!--onclick='setPayment(type, {cardNo, cardName, month, year, cvv})'-->
+                                            Card online
+                                        </label>
+
+                                        <div class="card-payment-information collapse row" id="card-payment-info"
+                                             aria-labelledby="card-check"
+                                             aria-expanded="false">
+                                            <div class="number-card col-6">
+                                                <label for="inputCardNumber" class="form-label mt-2">NUMARUL
+                                                    CARDULUI:</label>
+                                                <input type="text" class="form-control" id="inputCardNumber"
+                                                       placeholder="Te rugam sa completezi numarul cardului.">
+                                            </div>
+                                            <div class="number-cvv col-6">
+                                                <label for="inputCVVName" class="form-label mt-2">COD DE
+                                                    SECURITATE:</label>
+                                                <input type="text" class="form-control" id="inputCVVName"
+                                                       placeholder="CVV/CVV2">
+                                            </div>
+                                            <div class="date-expiration mb-2 col-3">
+                                                <label for="expirationDate" class="form-label">DATA DE EXPIRARE:</label>
+                                                <input type="text" class="form-control cvv" id="expirationDate"
+                                                       placeholder="EX: 11/22">
+                                            </div>
+                                            <div class="name-first mb-2">
+                                                <label for="ownerName" class="form-label">TITULAR CARD</label>
+                                                <input type="text" class="form-control" id="ownerName"
+                                                       placeholder="NUMELE DETINATORULUI DE CARD">
+                                            </div>
+                                            <div class="option mb-2">
+                                                <input class="form-address-send-place" type="checkbox"
+                                                       id="save-information">
+                                                <label class="form-send-package" for="save-information">
+                                                    Salveaza informatiile pentru achizitii ulterioare.
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check panel mb-2 bg-light">
+                                        <input class="button-radio-align" type="radio" id="cash-check" name="Check"
+                                               checked>
+                                        <label class="form-check-label" for="cash-check">
+                                            Plata la livrare
+                                        </label>
+                                    </div>
+
+                                    <div class="option mb-2 mt-4">
+                                        <input class="form-address-send-place" type="checkbox" id="form-terms">
+                                        <label class="form-send-package" for="form-terms">
+                                            Prin plasarea comenzii, sunt de acord cu termenii si conditiile acestui
+                                            site.
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Plaseaza comanda
+                                </button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-check panel mb-2 bg-light">
-                        <input class="button-radio-align" type="radio" id="cash-check" name="Check" checked>
-                        <label class="form-check-label" for="cash-check">
-                            Plata la livrare
-                        </label>
-                    </div>
-
-                    <div class="option mb-2 mt-4">
-                        <input class="form-address-send-place" type="checkbox" id="form-terms">
-                        <label class="form-send-package" for="form-terms">
-                            Prin plasarea comenzii, sunt de acord cu termenii si conditiile acestui site.
-                        </label>
-                    </div>
-                </form>
-
-                <button type="submit" class="mt-4 btn-style mb-3" onclick="process()">Plaseaza comanda</button>
-            </div>
-        </div>
-    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Continue</button>
@@ -502,16 +554,16 @@
 </script>
 <script>
     function onTriggerMainMenu(elId) {
-       let menu = document.getElementById(elId);
-       if (menu) {
-           if (menu.classList.contains('d-none')){
-               menu.classList.remove('d-none')
-           }else {
-               menu.classList.add('d-none')
-           }
-       }else {
-           console.error(`Element with id ${elId} not found`);
-       }
+        let menu = document.getElementById(elId);
+        if (menu) {
+            if (menu.classList.contains('d-none')) {
+                menu.classList.remove('d-none')
+            } else {
+                menu.classList.add('d-none')
+            }
+        } else {
+            console.error(`Element with id ${elId} not found`);
+        }
     }
 </script>
 <script type="text/javascript" src="assets/libs/bootstrap-4.6/js/jquery-3.5.1.min.js"></script>
