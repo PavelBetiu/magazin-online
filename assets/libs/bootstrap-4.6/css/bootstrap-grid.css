@@ -768,7 +768,10 @@ html {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
   }
-  .col-lg-auto {
+  .
+  .row-cols-xl-1 > * {
+    -ms-flex: 0 0 100%;
+col-lg-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
@@ -930,7 +933,7 @@ html {
   .offset-lg-11 {
     margin-left: 91.666667%;
   }
-}
+
 
 @media (min-width: 1200px) {
   .col-xl {
@@ -939,10 +942,7 @@ html {
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
-  }
-  .row-cols-xl-1 > * {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+  }    flex: 0 0 100%;
     max-width: 100%;
   }
   .row-cols-xl-2 > * {
